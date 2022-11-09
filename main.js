@@ -21,23 +21,9 @@ itemEntryForm.addEventListener("submit", function(event){
     }else{
     alert(`Your task ${task.value} has been created for ${owner.value} and is due by ${dueDate.value}.`);}
 
-    //Add new task data to newTask object (local) and to taskListArray (global)
-    let newTask = {};
-    newTask.task = task.value;
-    newTask.dueDate = dueDate.value;
-    newTask.taskOwner = owner.value;
-    newTask.status = "No";
-    
-    //assign values to variables
-    let task1 = newTask.task;
-    let owner1 = newTask.taskOwner;
-    let date1 = newTask.dueDate;
-    let date2 = date1.toDateString()
-    let status1 = newTask.status
-
     //create new row in table
-    let row1 = table.insertRow(1); //adds new line to first position below the header
-    
+    let row1 = table.insertRow(1); //adds new line to first position below the header as a tr element
+    //this adds the individual cells as td elements
     let cell1 = row1.insertCell(0);
     let cell2 = row1.insertCell(1);
     let cell3 = row1.insertCell(2);
@@ -52,41 +38,39 @@ itemEntryForm.addEventListener("submit", function(event){
 
     //populate new row with data
     cell1.innerHTML = "<input type = 'checkbox' id = 'checked'>";
-    cell2.innerText = task1;
-    cell3.innerText = owner1;
-    cell4.innerText = date2;
-    cell5.innerText = status1;
+    cell2.innerText = task.value;
+    cell3.innerText = owner.value;
+    cell4.innerText = dueDate.value;
+    cell5.innerText = "No";
 
     //set event listeners
     let checkBox = document.querySelectorAll("#checked")
-   
     
     document.getElementById("completeButton").onclick = function(){
-        for (let n = 0; n<checkBox.length; n++){
-            if (checkBox[n].checked === true && complete[n].innerText === "No"){
-                complete[n].innerText = "Yes";
+        checkBox = document.querySelectorAll("#checked");
+        for (let i = 0; i<checkBox.length; i++){
+            if (checkBox[i].checked === true && complete[i].innerText === "No"){
+                complete[i].innerText = "Yes";
             }
-        }
-    }
+    }}
     
     document.getElementById("deleteButton").onclick = function(){
-        for (let n = 0; n<checkBox.length; n++){
-            if (checkBox[n].checked === true){
+        checkBox = document.querySelectorAll("#checked");
+        for (let m = 0; m < checkBox.length; m++){
+            if (checkBox[m].checked === true){
                 let table = document.getElementById("taskList");
-                table.deleteRow(n);
+                table.deleteRow(m+1);
             }
     }}
     
     document.getElementById("clearButton").onclick = function(){
+        checkBox = document.querySelectorAll("#checked");
         for (let n = checkBox.length; n>0; n--){
             let table = document.getElementById("taskList");
             table.deleteRow(n);
         
     }}
     
-
-
-
     //clear input form
     task.value = "";
     dueDate.value = "";
