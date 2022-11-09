@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <form id="itemEntryForm">
+        <h1>Create New Task</h1>
+        <p>Please enter the following information to add a to-do item.</p>
+
+        <div>
+            <label>Enter the task: </label>
+            <input type="text" id = "task" class = "task" placeholder="Task" autocomplete="off"> 
+        </div> 
+        <div>
+            <label>Enter the due date: </label>
+            <input type="date" id = "dueDate" class = "dueDate"  autocomplete="off"> 
+        </div> 
+        <div>
+            <label>Enter the responsible party </label>
+            <input type="text" id = "responsible" class = "responsible" placeholder="Name" autocomplete="off"> 
+        </div> 
+        
+        <input type="submit">
+    </form>
+
+    <form id="taskListForm">
+        <h1>Current Tasks</h1>
+        <p>Here is your list of current tasks.</p>
+
+        <div id = "list">
+           <table id = "taskList">
+            <tr>
+                <th></th>
+                <th>Task</th>
+                <th>Owner</th>
+                <th>Due Date</th>
+                <th>Completed</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td id = "task"></td>
+                <td id = "owner"></td>
+                <td id = "date"></td>
+                <td id = "complete"></td>
+            </tr>
+           </table>
+        </div> 
+        <input type = "button" id = "completeButton" name = "button" value = "Complete"/>
+        <input type = "button" id = "deleteButton" name = "button" value = "Delete"/>
+        <input type = "button" id = "clearButton" name = "button" value = "Clear"/>
+    </form>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

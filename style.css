@@ -1,0 +1,101 @@
+body {
+    background-color: slateblue;
+}
+
+
+form{
+    max-width: 600px;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 20px;
+    background-color: bisque;
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    border: 2px solid black;
+    width: 100%;
+    padding: 5px;
+    margin: 4px 0;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px 15px;
+  }
+
+input[type=text] {
+    width: 40%;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 25px;
+    border: 2px solid rgb(18, 24, 186);
+    box-sizing: border-box;
+  }
+  input[type=text]:hover {
+    width: 40%;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 25px;
+    border: 2px solid red;
+    box-sizing: border-box;
+  }
+
+  input[type=date] {
+    width: 40%;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 25px;
+    border: 2px solid rgb(18, 24, 186);
+    box-sizing: border-box;
+  }
+  input[type=date]:hover {
+    width: 40%;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 25px;
+    border: 2px solid red;
+    box-sizing: border-box;
+  }
+
+
+
+
+  input[type=submit] {
+    padding: 5px;
+    margin: 4px 0;
+    background-color: rgb(215, 215, 215);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+  input[type=submit]:hover {
+    padding: 5px;
+    margin: 4px 0;
+    background-color: green;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+  
+  #completeButton:hover {
+    background-color: green;
+    color: white;
+  }
+
+  #deleteButton:hover {
+    background-color:yellow;
+    color: black;
+  }
+
+  #clearButton:hover {
+    background-color: red;
+    color: white;
+  }
