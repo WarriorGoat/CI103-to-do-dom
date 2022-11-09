@@ -3,7 +3,14 @@ body {
 }
 
 h1{
-    text-shadow: 2px gray;
+    text-shadow: 3px 3px black;
+}
+p{
+    text-shadow: 2px 2px black;
+}
+
+label{
+    text-shadow: 2px 2px black;
 }
 
 form{
@@ -20,17 +27,23 @@ form{
 table{
     border: 2px solid black;
     width: 100%;
+    max-width: 500px;
     padding: 5px;
     margin: 4px 0;
 }
-
+th {
+    text-shadow: 2px 2px black;
+}
 td {
     border: 1px solid black;
     padding: 10px 15px;
+    text-shadow: 2px 2px black;
+    color: rgb(252, 234, 213)
   }
 
 input[type=text] {
     width: 40%;
+    max-width: 300px;
     padding: 10px;
     margin: 4px 0;
     border-radius: 25px;
@@ -39,15 +52,17 @@ input[type=text] {
   }
   input[type=text]:hover {
     width: 40%;
+    max-width: 300px;
     padding: 10px;
     margin: 4px 0;
     border-radius: 25px;
-    border: 2px solid red;
+    border: 3px solid red;
     box-sizing: border-box;
   }
 
   input[type=date] {
     width: 40%;
+    max-width: 200px;
     padding: 10px;
     margin: 4px 0;
     border-radius: 25px;
@@ -56,10 +71,11 @@ input[type=text] {
   }
   input[type=date]:hover {
     width: 40%;
+    max-width: 200px;
     padding: 10px;
     margin: 4px 0;
     border-radius: 25px;
-    border: 2px solid red;
+    border: 3px solid red;
     box-sizing: border-box;
   }
 
