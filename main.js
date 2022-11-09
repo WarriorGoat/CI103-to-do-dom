@@ -29,7 +29,7 @@ itemEntryForm.addEventListener("submit", function(event){
     let cell3 = row1.insertCell(2);
     let cell4 = row1.insertCell(3);
     let cell5 = row1.insertCell(4);
-    //assigns a class to the status td element 
+    //assigns a id to the status td element 
     cell1.setAttribute("id", "checkbox")
     cell2.setAttribute("id", "task")
     cell3.setAttribute("id", "owner")
